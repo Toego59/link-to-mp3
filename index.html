@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#f4f0e8" />
+    <title>Reelcut | Link to media</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="./" aria-label="Reelcut home"><span class="brand-mark">↗</span><span>reelcut</span></a>
+      <div class="header-note"><span class="status-dot"></span> private by default</div>
+    </header>
+    <main>
+      <section class="hero" aria-labelledby="page-title">
+        <div class="eyebrow"><span>01</span> turn a link into a file</div>
+        <h1 id="page-title">Keep the good parts.<br /><em>Lose the friction.</em></h1>
+        <p class="hero-copy">Paste a video link. Choose how you want it back.</p>
+      </section>
+      <section class="workspace" aria-label="Media converter">
+        <div class="input-card panel">
+          <div class="panel-heading"><div><span class="step-number">01</span><h2>Paste your link</h2></div><span class="micro-label">SOURCE URL</span></div>
+          <div class="link-intro"><div class="link-icon" aria-hidden="true">↗</div><p>Use a public link from a video site or a direct media file.</p></div>
+          <div class="url-row"><label class="sr-only" for="url-input">Video URL</label><input id="url-input" type="url" placeholder="https://youtube.com/watch?v=..." autocomplete="url" /><button class="clear-button" id="clear-button" type="button" aria-label="Clear link">×</button></div>
+          <p class="input-hint" id="input-hint">Your link is sent only when you press convert.</p>
+          <div class="supported-links"><span>Works with</span><div><b>YT</b><b>VIMEO</b><b>DIRECT MP4</b><b>MORE</b></div></div>
+        </div>
+        <div class="output-card panel">
+          <div class="panel-heading"><div><span class="step-number">02</span><h2>Choose your output</h2></div><span class="micro-label">FORMAT</span></div>
+          <div class="format-grid" role="group" aria-label="Output format">
+            <button class="format-option selected" data-format="mp4" type="button"><strong>MP4</strong><span>video · universal</span></button>
+            <button class="format-option" data-format="mkv" type="button"><strong>MKV</strong><span>video · flexible</span></button>
+            <button class="format-option" data-format="mp3" type="button"><strong>MP3</strong><span>audio · compact</span></button>
+            <button class="format-option" data-format="wav" type="button"><strong>WAV</strong><span>audio · lossless</span></button>
+          </div>
+          <label class="select-label" for="quality-select">Quality <select id="quality-select"><option>Source quality</option><option>1080p · crisp</option><option>720p · lighter</option><option>320 kbps · audio</option></select></label>
+          <div class="action-row"><button class="convert-button" id="convert-button" type="button"><span>Convert link</span><span class="button-arrow">↗</span></button></div>
+          <div class="secure-note"><span>◈</span> Your link is handled once, then forgotten.</div>
+        </div>
+      </section>
+      <section class="result panel" id="result-panel" aria-live="polite" hidden>
+        <div class="result-status"><span class="result-icon" id="result-icon">✓</span><div><p class="micro-label" id="result-label">READY</p><h2 id="result-title">Your file is ready.</h2></div></div>
+        <p id="result-message">Choose a source to get started.</p>
+        <div class="result-actions"><a class="download-button" id="download-button" href="#" download hidden>Download file <span>↓</span></a></div>
+      </section>
+      <section class="fine-print"><span>Good to know</span><p>Only convert links you have permission to download. Availability depends on the source site and its terms.</p></section>
+    </main>
+    <footer><span>REELCUT / 2026</span><span>made for keeping, not collecting</span></footer>
+    <script src="app.js"></script>
+  </body>
+</html>
